@@ -1,0 +1,16 @@
+opencv-python-headless
+gunicorn
+itsdangerous
+flask
+MarkupSafe
+Werkzeug
+numpy
+scipy
+Tensorflow-cpu 
+matplotlib
+pandas
+opencv-python-headless
+keras
+ h5py
+
+
