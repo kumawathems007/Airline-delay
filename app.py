@@ -1,9 +1,16 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
+from flask.helpers import send_file
+from jinja2 import Template
 
+import matplotlib.pyplot as plt
+from os import path
+import re
+from flask import Flask, render_template, request
+from werkzeug.utils import secure_filename
+import os
 app = Flask(__name__)
-
 model = pickle.load(open('nb_model2.pkl', 'rb'))
 model = pickle.load(open('dt_model2.pkl', 'rb')) 
 
@@ -52,7 +59,7 @@ def predict():
     return pre
 
     return render_template('index2.html', prediction_text=pre )
-
+   
 if __name__ == "__main__":
     app.run(debug=True)
    
